@@ -1,0 +1,471 @@
+{
+  "summary": {
+    "grounding_test": {
+      "pairs": 64,
+      "conditions": {
+        "correct": {
+          "accuracy": {
+            "mean": 0.6796875,
+            "ci_low": 0.5859375,
+            "ci_high": 0.765625
+          },
+          "pair_accuracy": {
+            "mean": 0.515625,
+            "ci_low": 0.390625,
+            "ci_high": 0.640625
+          },
+          "nll": {
+            "mean": 1.3032342933415748,
+            "ci_low": 0.903996861811072,
+            "ci_high": 1.7561476919714323
+          },
+          "identical_rate": 0.265625,
+          "empty_rate": 0.0,
+          "partner_match_rate": 0.140625,
+          "seconds_per_answer": 0.007693536164062487
+        },
+        "complementary": {
+          "accuracy": {
+            "mean": 0.140625,
+            "ci_low": 0.0859375,
+            "ci_high": 0.203125
+          },
+          "pair_accuracy": {
+            "mean": 0.015625,
+            "ci_low": 0.0,
+            "ci_high": 0.046875
+          },
+          "nll": {
+            "mean": 3.9867059496991715,
+            "ci_low": 3.517909887514361,
+            "ci_high": 4.479654941390436
+          },
+          "identical_rate": 0.265625,
+          "empty_rate": 0.0,
+          "partner_match_rate": 0.6796875,
+          "seconds_per_answer": 0.005279192242187369
+        },
+        "mismatched": {
+          "accuracy": {
+            "mean": 0.375,
+            "ci_low": 0.3125,
+            "ci_high": 0.4375
+          },
+          "pair_accuracy": {
+            "mean": 0.046875,
+            "ci_low": 0.0,
+            "ci_high": 0.109375
+          },
+          "nll": {
+            "mean": 2.5546730024661883,
+            "ci_low": 2.1530832053139193,
+            "ci_high": 2.9844861735437465
+          },
+          "identical_rate": 0.75,
+          "empty_rate": 0.0,
+          "partner_match_rate": 0.375,
+          "seconds_per_answer": 0.005626691624999902
+        },
+        "none": {
+          "accuracy": {
+            "mean": 0.0390625,
+            "ci_low": 0.0078125,
+            "ci_high": 0.078125
+          },
+          "pair_accuracy": {
+            "mean": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0
+          },
+          "nll": {
+            "mean": 5.200221379753202,
+            "ci_low": 4.690857730060816,
+            "ci_high": 5.707516126101837
+          },
+          "identical_rate": 1.0,
+          "empty_rate": 0.0,
+          "partner_match_rate": 0.0390625,
+          "seconds_per_answer": 0.03298525650781248
+        }
+      },
+      "types": {
+        "counting": {
+          "correct": {
+            "accuracy": {
+              "mean": 0.46875,
+              "ci_low": 0.34375,
+              "ci_high": 0.59375
+            },
+            "pair_accuracy": {
+              "mean": 0.25,
+              "ci_low": 0.09375,
+              "ci_high": 0.40625
+            }
+          },
+          "complementary": {
+            "accuracy": {
+              "mean": 0.171875,
+              "ci_low": 0.09335937500000013,
+              "ci_high": 0.265625
+            },
+            "pair_accuracy": {
+              "mean": 0.03125,
+              "ci_low": 0.0,
+              "ci_high": 0.09375
+            }
+          },
+          "mismatched": {
+            "accuracy": {
+              "mean": 0.296875,
+              "ci_low": 0.1875,
+              "ci_high": 0.4066406250000014
+            },
+            "pair_accuracy": {
+              "mean": 0.09375,
+              "ci_low": 0.0,
+              "ci_high": 0.21875
+            }
+          },
+          "none": {
+            "accuracy": {
+              "mean": 0.078125,
+              "ci_low": 0.015625,
+              "ci_high": 0.140625
+            },
+            "pair_accuracy": {
+              "mean": 0.0,
+              "ci_low": 0.0,
+              "ci_high": 0.0
+            }
+          }
+        },
+        "presence": {
+          "correct": {
+            "accuracy": {
+              "mean": 0.890625,
+              "ci_low": 0.8125,
+              "ci_high": 0.953125
+            },
+            "pair_accuracy": {
+              "mean": 0.78125,
+              "ci_low": 0.625,
+              "ci_high": 0.90625
+            }
+          },
+          "complementary": {
+            "accuracy": {
+              "mean": 0.109375,
+              "ci_low": 0.046875,
+              "ci_high": 0.1875
+            },
+            "pair_accuracy": {
+              "mean": 0.0,
+              "ci_low": 0.0,
+              "ci_high": 0.0
+            }
+          },
+          "mismatched": {
+            "accuracy": {
+              "mean": 0.453125,
+              "ci_low": 0.40625,
+              "ci_high": 0.5
+            },
+            "pair_accuracy": {
+              "mean": 0.0,
+              "ci_low": 0.0,
+              "ci_high": 0.0
+            }
+          },
+          "none": {
+            "accuracy": {
+              "mean": 0.0,
+              "ci_low": 0.0,
+              "ci_high": 0.0
+            },
+            "pair_accuracy": {
+              "mean": 0.0,
+              "ci_low": 0.0,
+              "ci_high": 0.0
+            }
+          }
+        }
+      },
+      "advantages": {
+        "accuracy": {
+          "mean": 0.5390625,
+          "ci_low": 0.40625,
+          "ci_high": 0.6640625
+        },
+        "nll": {
+          "mean": 2.6834716563575967,
+          "ci_low": 2.14305113254768,
+          "ci_high": 3.2352325361772616
+        }
+      }
+    },
+    "vqa_test": {
+      "pairs": 96,
+      "conditions": {
+        "correct": {
+          "accuracy": {
+            "mean": 0.5276041666666667,
+            "ci_low": 0.4578125,
+            "ci_high": 0.5979166666666668
+          },
+          "pair_accuracy": {
+            "mean": 0.2604166666666667,
+            "ci_low": 0.17708333333333334,
+            "ci_high": 0.3541666666666667
+          },
+          "nll": {
+            "mean": 1.5339723812812736,
+            "ci_low": 1.2043074098083555,
+            "ci_high": 1.9248900853748032
+          },
+          "identical_rate": 0.5104166666666666,
+          "empty_rate": 0.0,
+          "partner_match_rate": 0.23958333333333334,
+          "seconds_per_answer": 0.0068012997656250835
+        },
+        "complementary": {
+          "accuracy": {
+            "mean": 0.26145833333333335,
+            "ci_low": 0.20675781250000003,
+            "ci_high": 0.3198046875000001
+          },
+          "pair_accuracy": {
+            "mean": 0.020833333333333332,
+            "ci_low": 0.0,
+            "ci_high": 0.052083333333333336
+          },
+          "nll": {
+            "mean": 2.7367653648737664,
+            "ci_low": 2.307386330939577,
+            "ci_high": 3.2186142001247697
+          },
+          "identical_rate": 0.5104166666666666,
+          "empty_rate": 0.0,
+          "partner_match_rate": 0.5104166666666666,
+          "seconds_per_answer": 0.00698918076041662
+        },
+        "mismatched": {
+          "accuracy": {
+            "mean": 0.3125,
+            "ci_low": 0.253125,
+            "ci_high": 0.3692708333333334
+          },
+          "pair_accuracy": {
+            "mean": 0.03125,
+            "ci_low": 0.0,
+            "ci_high": 0.07291666666666667
+          },
+          "nll": {
+            "mean": 2.771421246958198,
+            "ci_low": 2.2987134374132436,
+            "ci_high": 3.317614678614579
+          },
+          "identical_rate": 0.6666666666666666,
+          "empty_rate": 0.0,
+          "partner_match_rate": 0.2552083333333333,
+          "seconds_per_answer": 0.0067234103854166465
+        },
+        "none": {
+          "accuracy": {
+            "mean": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0
+          },
+          "pair_accuracy": {
+            "mean": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0
+          },
+          "nll": {
+            "mean": 8.545294612646103,
+            "ci_low": 7.872105984141429,
+            "ci_high": 9.22220867634751
+          },
+          "identical_rate": 1.0,
+          "empty_rate": 0.0,
+          "partner_match_rate": 0.0,
+          "seconds_per_answer": 0.03934954547395826
+        }
+      },
+      "types": {
+        "number": {
+          "correct": {
+            "accuracy": {
+              "mean": 0.42291666666666666,
+              "ci_low": 0.25625000000000003,
+              "ci_high": 0.5895833333333333
+            },
+            "pair_accuracy": {
+              "mean": 0.2916666666666667,
+              "ci_low": 0.125,
+              "ci_high": 0.4583333333333333
+            }
+          },
+          "complementary": {
+            "accuracy": {
+              "mean": 0.21458333333333335,
+              "ci_low": 0.09583333333333333,
+              "ci_high": 0.3541666666666667
+            },
+            "pair_accuracy": {
+              "mean": 0.08333333333333333,
+              "ci_low": 0.0,
+              "ci_high": 0.20833333333333334
+            }
+          },
+          "mismatched": {
+            "accuracy": {
+              "mean": 0.20833333333333334,
+              "ci_low": 0.10416666666666667,
+              "ci_high": 0.3333333333333333
+            },
+            "pair_accuracy": {
+              "mean": 0.041666666666666664,
+              "ci_low": 0.0,
+              "ci_high": 0.125
+            }
+          },
+          "none": {
+            "accuracy": {
+              "mean": 0.0,
+              "ci_low": 0.0,
+              "ci_high": 0.0
+            },
+            "pair_accuracy": {
+              "mean": 0.0,
+              "ci_low": 0.0,
+              "ci_high": 0.0
+            }
+          }
+        },
+        "other": {
+          "correct": {
+            "accuracy": {
+              "mean": 0.4527777777777778,
+              "ci_low": 0.3319444444444445,
+              "ci_high": 0.5777777777777777
+            },
+            "pair_accuracy": {
+              "mean": 0.2222222222222222,
+              "ci_low": 0.08333333333333333,
+              "ci_high": 0.3611111111111111
+            }
+          },
+          "complementary": {
+            "accuracy": {
+              "mean": 0.1513888888888889,
+              "ci_low": 0.07777777777777778,
+              "ci_high": 0.23333333333333328
+            },
+            "pair_accuracy": {
+              "mean": 0.0,
+              "ci_low": 0.0,
+              "ci_high": 0.0
+            }
+          },
+          "mismatched": {
+            "accuracy": {
+              "mean": 0.14305555555555557,
+              "ci_low": 0.06944444444444445,
+              "ci_high": 0.2222222222222222
+            },
+            "pair_accuracy": {
+              "mean": 0.0,
+              "ci_low": 0.0,
+              "ci_high": 0.0
+            }
+          },
+          "none": {
+            "accuracy": {
+              "mean": 0.0,
+              "ci_low": 0.0,
+              "ci_high": 0.0
+            },
+            "pair_accuracy": {
+              "mean": 0.0,
+              "ci_low": 0.0,
+              "ci_high": 0.0
+            }
+          }
+        },
+        "yes/no": {
+          "correct": {
+            "accuracy": {
+              "mean": 0.6722222222222222,
+              "ci_low": 0.5986111111111111,
+              "ci_high": 0.7430555555555556
+            },
+            "pair_accuracy": {
+              "mean": 0.2777777777777778,
+              "ci_low": 0.1388888888888889,
+              "ci_high": 0.4166666666666667
+            }
+          },
+          "complementary": {
+            "accuracy": {
+              "mean": 0.4027777777777778,
+              "ci_low": 0.3208333333333333,
+              "ci_high": 0.4819444444444444
+            },
+            "pair_accuracy": {
+              "mean": 0.0,
+              "ci_low": 0.0,
+              "ci_high": 0.0
+            }
+          },
+          "mismatched": {
+            "accuracy": {
+              "mean": 0.5513888888888888,
+              "ci_low": 0.5,
+              "ci_high": 0.605590277777778
+            },
+            "pair_accuracy": {
+              "mean": 0.05555555555555555,
+              "ci_low": 0.0,
+              "ci_high": 0.1388888888888889
+            }
+          },
+          "none": {
+            "accuracy": {
+              "mean": 0.0,
+              "ci_low": 0.0,
+              "ci_high": 0.0
+            },
+            "pair_accuracy": {
+              "mean": 0.0,
+              "ci_low": 0.0,
+              "ci_high": 0.0
+            }
+          }
+        }
+      },
+      "advantages": {
+        "accuracy": {
+          "mean": 0.2661458333333333,
+          "ci_low": 0.17134114583333335,
+          "ci_high": 0.3620182291666668
+        },
+        "nll": {
+          "mean": 1.2027929835924926,
+          "ci_low": 0.8344273959954079,
+          "ci_high": 1.6110179228826382
+        }
+      }
+    }
+  },
+  "seconds": 19.318824929999998,
+  "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "final_stage": "vqa",
+  "settings": {
+    "decoding": "greedy",
+    "max_new_tokens": 16,
+    "batch_size": 8,
+    "enable_thinking": false,
+    "bootstrap_resamples": 4000,
+    "limit_pairs": null
+  }
+}

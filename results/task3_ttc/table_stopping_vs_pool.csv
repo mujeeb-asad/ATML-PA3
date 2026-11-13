@@ -1,0 +1,41 @@
+dataset,policy,by,bin,questions,mean_rollouts,accuracy
+math,agreement,correct_fraction,0 to .25,211,24.854976303317535,0.0947867298578199
+math,agreement,correct_fraction,.25 to .5,78,21.784615384615385,0.7679487179487179
+math,agreement,correct_fraction,.5 to .75,74,9.481081081081081,0.9783783783783785
+math,agreement,correct_fraction,.75 to <1,175,4.377142857142857,0.9988571428571429
+math,agreement,correct_fraction,1,262,4.0,1.0
+math,quality,correct_fraction,0 to .25,211,19.133649289099527,0.1009478672985782
+math,quality,correct_fraction,.25 to .5,78,12.374358974358975,0.7243589743589743
+math,quality,correct_fraction,.5 to .75,74,5.697297297297298,0.9621621621621622
+math,quality,correct_fraction,.75 to <1,175,4.194285714285714,0.9965714285714286
+math,quality,correct_fraction,1,262,4.0,1.0
+math,agreement,plurality_share,0 to .25,90,31.288888888888888,0.21
+math,agreement,plurality_share,.25 to .5,148,24.3972972972973,0.40540540540540543
+math,agreement,plurality_share,.5 to .75,107,10.642990654205606,0.6850467289719626
+math,agreement,plurality_share,.75 to <1,191,4.385340314136125,0.9157068062827225
+math,agreement,plurality_share,1,264,4.0,0.9924242424242424
+math,quality,plurality_share,0 to .25,90,26.853333333333335,0.20111111111111113
+math,quality,plurality_share,.25 to .5,148,15.032432432432433,0.3932432432432433
+math,quality,plurality_share,.5 to .75,107,6.583177570093458,0.6785046728971962
+math,quality,plurality_share,.75 to <1,191,4.209424083769633,0.9136125654450262
+math,quality,plurality_share,1,264,4.0,0.9924242424242424
+mathvista,agreement,correct_fraction,0 to .25,240,16.183333333333334,0.06958333333333333
+mathvista,agreement,correct_fraction,.25 to .5,136,10.1,0.5147058823529411
+mathvista,agreement,correct_fraction,.5 to .75,132,5.660606060606061,0.8939393939393939
+mathvista,agreement,correct_fraction,.75 to <1,210,4.171428571428572,0.9995238095238096
+mathvista,agreement,correct_fraction,1,82,4.0,1.0
+mathvista,quality,correct_fraction,0 to .25,240,18.158333333333335,0.065
+mathvista,quality,correct_fraction,.25 to .5,136,12.450000000000001,0.5272058823529412
+mathvista,quality,correct_fraction,.5 to .75,132,6.745454545454545,0.9181818181818182
+mathvista,quality,correct_fraction,.75 to <1,210,4.300952380952381,0.9995238095238096
+mathvista,quality,correct_fraction,1,82,4.0,1.0
+mathvista,agreement,plurality_share,0 to .25,75,24.112000000000002,0.108
+mathvista,agreement,plurality_share,.25 to .5,177,11.35819209039548,0.384180790960452
+mathvista,agreement,plurality_share,.5 to .75,220,7.909090909090909,0.5818181818181818
+mathvista,agreement,plurality_share,.75 to <1,241,5.286307053941909,0.8734439834024896
+mathvista,agreement,plurality_share,1,87,4.32183908045977,0.9425287356321839
+mathvista,quality,plurality_share,0 to .25,75,26.410666666666668,0.12
+mathvista,quality,plurality_share,.25 to .5,177,14.271186440677965,0.3898305084745763
+mathvista,quality,plurality_share,.5 to .75,220,9.012727272727272,0.5909090909090909
+mathvista,quality,plurality_share,.75 to <1,241,5.424066390041494,0.8730290456431535
+mathvista,quality,plurality_share,1,87,4.32183908045977,0.9425287356321839

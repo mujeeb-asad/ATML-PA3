@@ -1,0 +1,65 @@
+seed: 6304
+rollout_drive_folder: https://drive.google.com/drive/folders/1utX-Gfi9vvaoi1mi0pzNpDGL1o1fAh23
+mathvista_metadata_url: https://raw.githubusercontent.com/lupantech/MathVista/452b0f83e0079029fb48d1d1b606d3954d812db1/data/testmini.json
+datasets:
+  math: qwen25-math
+  mathvista: qwen25vl-mathvista
+data_dir: data/task3
+dev_questions: 200
+rollouts_per_question: 32
+budgets:
+- 1
+- 2
+- 4
+- 8
+- 16
+- 32
+orders: 10
+bootstrap_resamples: 1000
+visconf_quantiles:
+- 0.05
+- 0.95
+visconf_eps: 1.0e-08
+trajectory_questions: 3
+trajectory_bins: 50
+question_limit: null
+adaptive_checks:
+- 4
+- 8
+- 16
+adaptive_taus:
+- 0.5
+- 0.625
+- 0.75
+- 0.875
+- 1.0
+adaptive_gammas:
+- 0.0
+- 0.1
+- 0.25
+- 0.5
+adaptive_tolerance: 0.01
+adaptive_quality_score:
+  math: self_certainty
+  mathvista: visconf
+live_questions: 50
+live_limit: null
+live_model: Qwen/Qwen2.5-3B-Instruct
+live_revision: aa8e72537993ba99e69dfaafa59ed015b17504d1
+system_message: You are a helpful assistant.
+question_suffix: '
+
+
+  Think step by step inside <think> </think> tags, then give your final answer inside
+  \boxed{}.'
+refine_instruction: Review the solution above. Identify and correct any errors; if
+  it is correct, retain its answer. Give your final answer inside \boxed{}.
+temperature: 0.7
+top_p: 0.8
+top_k: 20
+repetition_penalty: 1.0
+single_cap: 3072
+parallel_responses: 3
+parallel_cap: 1024
+refine_cap: 2048
+results_dir: results/task3_ttc

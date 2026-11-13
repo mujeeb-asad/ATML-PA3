@@ -1,0 +1,11 @@
+run,suite,type,questions,best_constant,best_constant_pct
+196,grounding_test,counting,64,1,28.125
+196,grounding_test,presence,64,yes,50.0
+196,vqa_test,number,48,2,29.166666666666668
+196,vqa_test,other,72,red,8.333333333333334
+196,vqa_test,yes/no,72,no,50.0
+49,grounding_test,counting,64,1,28.125
+49,grounding_test,presence,64,yes,50.0
+49,vqa_test,number,48,2,29.166666666666668
+49,vqa_test,other,72,red,8.333333333333334
+49,vqa_test,yes/no,72,no,50.0

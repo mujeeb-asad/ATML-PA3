@@ -1,0 +1,64 @@
+{
+  "updates": 4500,
+  "effective_batch": 16,
+  "micro_batch": 16,
+  "grad_accum": 1,
+  "examples": 72000,
+  "stages": [
+    "caption",
+    "instruct",
+    "vqa"
+  ],
+  "trainable_by_stage": {
+    "caption": 1837056,
+    "instruct": 6424576,
+    "vqa": 6424576
+  },
+  "connector_params": 1837056,
+  "lora_params": 4587520,
+  "warmup_updates": {
+    "caption": 113,
+    "instruct": 75,
+    "vqa": 38
+  },
+  "train_seconds_by_stage": {
+    "caption": 231.72607564499938,
+    "instruct": 177.66818536400064,
+    "vqa": 87.71614321800001
+  },
+  "train_seconds": 497.11040422700006,
+  "dev_seconds": 3.748679325999934,
+  "checkpoint_seconds": 1.707842317999983,
+  "peak_memory_gb": 4.333486557006836,
+  "dev_peak_memory_gb": 4.727588176727295,
+  "skipped_updates": [
+    1,
+    2,
+    3,
+    4,
+    12
+  ],
+  "mixture_examples": {
+    "caption": {
+      "caption": 36000
+    },
+    "instruct": {
+      "caption": 6012,
+      "presence": 11974,
+      "counting": 6014
+    },
+    "vqa": {
+      "vqa": 8392,
+      "caption": 1152,
+      "presence": 1226,
+      "counting": 1230
+    }
+  },
+  "truncated": {
+    "question": 0,
+    "target": 0
+  },
+  "gradient_checkpointing": true,
+  "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "seed": 6304
+}

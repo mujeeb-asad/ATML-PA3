@@ -1,0 +1,42 @@
+{
+  "math": {
+    "agreement": {
+      "family": "agreement",
+      "chosen": "agreement",
+      "tau": 0.625,
+      "gamma": null,
+      "dev_accuracy": 0.8260000000000001,
+      "dev_cost": 7088.955499999999,
+      "dev_reference_accuracy": 0.825
+    },
+    "quality": {
+      "family": "quality",
+      "chosen": "quality",
+      "tau": 0.5,
+      "gamma": 0.0,
+      "dev_accuracy": 0.8215,
+      "dev_cost": 5479.528499999999,
+      "dev_reference_accuracy": 0.825
+    }
+  },
+  "mathvista": {
+    "agreement": {
+      "family": "agreement",
+      "chosen": "agreement",
+      "tau": 0.5,
+      "gamma": null,
+      "dev_accuracy": 0.636,
+      "dev_cost": 3705.4309999999996,
+      "dev_reference_accuracy": 0.6425
+    },
+    "quality": {
+      "family": "quality",
+      "chosen": "quality",
+      "tau": 0.5,
+      "gamma": 0.0,
+      "dev_accuracy": 0.6395000000000001,
+      "dev_cost": 4120.647,
+      "dev_reference_accuracy": 0.6425
+    }
+  }
+}

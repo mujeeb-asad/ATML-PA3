@@ -1,0 +1,4 @@
+\section{Experimental setup}
+\label{sec:setup}
+
+All runs use seed 6304 and were trained or sampled once, so seed-to-seed variation is not measured; brackets give paired 95\% bootstrap intervals over evaluation items (examples, complementary pairs or questions). Tasks 1 and 2 train on one NVIDIA RTX PRO 6000 in FP16 with dynamic loss scaling, AdamW (weight decay 0.01) and gradient clipping at norm 1.0, and the Task 3 live generation runs on an NVIDIA L4. Every required step and the optional 49-token run completed. Two prescribed values were changed for speed: the Task 1 microbatch (16 with 2 accumulation steps instead of 2 with 16) and the Task 2 microbatch (16 with 1 instead of 8 with 2). Both keep the effective batch, the examples in each update and the loss normalisation, so they change only floating-point summation order, adapter dropout masks, and the reported time and memory. The repository's \file{deviations.md} records every open choice.

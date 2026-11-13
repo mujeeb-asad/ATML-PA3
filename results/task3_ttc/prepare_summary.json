@@ -1,0 +1,65 @@
+{
+  "scorer": {
+    "math_verify": "0.9.0",
+    "latex2sympy2_extended": "1.11.0",
+    "mathvista_rules": "calculate_score.py normalize_extracted_answer, testmini.json at commit 452b0f8"
+  },
+  "datasets": {
+    "math": {
+      "checks": {
+        "same_keys_in_every_file": true,
+        "single_dataset_name": true,
+        "rollouts_0_to_31_per_question": true,
+        "generated_token_ids_matches_n_generated_text_tokens": true,
+        "logp_matches_n_generated_text_tokens": true,
+        "kl_u_p_matches_n_generated_text_tokens": true,
+        "finite_token_values": true,
+        "no_empty_rollout": true,
+        "rollouts_graded_differently_alone": 0
+      },
+      "questions": 1000,
+      "rollouts": 32000,
+      "retained_tokens": 20742094,
+      "capped_rollouts": 523,
+      "null_extractions": 521,
+      "unconvertible_extraction_rollouts": 0,
+      "unconvertible_groups": 0,
+      "multi_choice_similarity_fallbacks": 0,
+      "rollout_accuracy": 0.66315625,
+      "mean_groups_per_question": 5.654,
+      "questions_with_a_correct_rollout": 919
+    },
+    "mathvista": {
+      "checks": {
+        "same_keys_in_every_file": true,
+        "single_dataset_name": true,
+        "rollouts_0_to_31_per_question": true,
+        "attention_preceding_counts_are_0_to_T-1": true,
+        "first_prediction_has_zero_generated_attention": true,
+        "generated_token_ids_matches_n_generated_text_tokens": true,
+        "logp_matches_n_generated_text_tokens": true,
+        "kl_u_p_matches_n_generated_text_tokens": true,
+        "n_generated_text_tokens (attention)_matches_n_generated_text_tokens": true,
+        "img_attn_total_matches_n_generated_text_tokens": true,
+        "prompt_text_attn_total_matches_n_generated_text_tokens": true,
+        "generated_text_attn_total_matches_n_generated_text_tokens": true,
+        "finite_token_values": true,
+        "no_empty_rollout": true,
+        "mathvista_gold_answers_normalize_to_themselves": true,
+        "rollouts_graded_differently_alone": 0
+      },
+      "questions": 1000,
+      "rollouts": 32000,
+      "retained_tokens": 8961703,
+      "capped_rollouts": 487,
+      "null_extractions": 3032,
+      "unconvertible_extraction_rollouts": 1889,
+      "unconvertible_groups": 1062,
+      "multi_choice_similarity_fallbacks": 93,
+      "rollout_accuracy": 0.5364375,
+      "mean_groups_per_question": 4.996,
+      "questions_with_a_correct_rollout": 894
+    }
+  },
+  "seconds": 427.190778626
+}

@@ -1,0 +1,78 @@
+\documentclass{article}
+
+\usepackage[main, final]{neurips_2026}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{booktabs}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{nicefrac}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{enumitem}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{float}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\setlist{nosep,leftmargin=*,topsep=1pt}
+\graphicspath{{../results/report/}}
+\raggedbottom
+\captionsetup{font=footnotesize,labelfont=bf,skip=3pt}
+\captionsetup[table]{position=below,skip=4pt}
+\renewcommand{\topfraction}{0.92}
+\renewcommand{\bottomfraction}{0.6}
+\renewcommand{\textfraction}{0.06}
+\renewcommand{\floatpagefraction}{0.85}
+\setcounter{topnumber}{3}
+\setcounter{totalnumber}{5}
+\setlength{\textfloatsep}{8pt plus 2pt minus 2pt}
+\setlength{\floatsep}{6pt plus 2pt minus 2pt}
+\setlength{\intextsep}{6pt plus 2pt minus 2pt}
+
+%no conference notice at the bottom of the first page
+\makeatletter
+\renewcommand{\@notice}{\enlargethispage{2\baselineskip}}
+\makeatother
+
+\newcommand{\file}[1]{\texttt{\small #1}}
+\newcommand{\ci}[2]{{\scriptsize[#1, #2]}}
+\newcommand{\pp}{\,pp}
+
+\title{Adapting, Connecting and Sampling: Three Controlled Experiments on Fine-Tuning, Visual Grounding and Test-Time Compute}
+
+\author{%
+  Mujeeb Asad \\
+  Student ID: 27100095 \\
+  Lahore University of Management Sciences \\
+  \texttt{27100095@lums.edu.pk}
+}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+A pre-trained language model can be made more useful by updating its weights for a new domain, by connecting it to another modality, or by spending more computation each time it answers. Each route promises a gain and carries a hidden cost, and this assignment measures both for one instance of each. First, we fine-tune Qwen3-0.6B on mathematical solutions with five methods that differ only in how far, and in which directions, the weights may move, and ask what the model gains in mathematics and gives up elsewhere. Second, we connect a frozen SigLIP image encoder to the same model through a trained connector and a three-stage curriculum, and test whether its answers depend on the image by swapping in a partner image whose correct answer differs. Third, with weights fixed, we study how to choose among many sampled solutions to a mathematics problem: voting, confidence and visual-attention signals, parallel sampling against self-revision, and rules that stop sampling once the evidence is clear. Code, configurations, logs and every reported number are available at \url{https://github.com/mujeeb-asad/ATML-PA3}.
+\end{abstract}
+
+\input{sec_intro}
+\input{sec_setup}
+\input{sec_task1}
+\input{sec_task2}
+\input{sec_task3}
+\input{sec_conclusion}
+
+\bibliographystyle{abbrvnat}
+{\small \bibliography{refs}}
+
+\input{appendix}
+
+
+\end{document}

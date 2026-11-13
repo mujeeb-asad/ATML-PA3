@@ -1,0 +1,3 @@
+suite,accuracy_advantage_pp,nll_advantage
+grounding_test,"53.9 [40.6, 66.4]","2.7 [2.1, 3.2]"
+vqa_test,"26.6 [17.1, 36.2]","1.2 [0.8, 1.6]"

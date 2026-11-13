@@ -1,0 +1,55 @@
+{
+  "vqa_train": 1536,
+  "vqa_test": 96,
+  "vqa_dev": 32,
+  "caption_train": 18000,
+  "presence_pool": 5000,
+  "counting_pool": 5000,
+  "grounding_test": 64,
+  "grounding_dev": 24,
+  "caption_dev": 96,
+  "types": {
+    "vqa_train": {
+      "yes/no": 640,
+      "number": 256,
+      "other": 640
+    },
+    "vqa_test": {
+      "yes/no": 36,
+      "number": 24,
+      "other": 36
+    },
+    "vqa_dev": {
+      "yes/no": 12,
+      "number": 8,
+      "other": 12
+    },
+    "presence_pool": {
+      "presence": 5000
+    },
+    "counting_pool": {
+      "counting": 5000
+    },
+    "grounding_test": {
+      "presence": 32,
+      "counting": 32
+    },
+    "grounding_dev": {
+      "presence": 12,
+      "counting": 12
+    }
+  },
+  "isolation": {
+    "train_images": 8738,
+    "eval_images": 528
+  },
+  "rules": {
+    "min_object_area": 0.01,
+    "count_range": [
+      1,
+      4
+    ],
+    "vqa_min_agreement": 8,
+    "seed": 6304
+  }
+}

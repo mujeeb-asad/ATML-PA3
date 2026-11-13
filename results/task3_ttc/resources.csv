@@ -1,0 +1,7 @@
+step,minutes,peak_memory_gb
+data preparation (cpu),7.119846310433333,
+offline selection + signals (cpu),1.5130346516666668,
+adaptive simulation (cpu),0.020091498833333315,
+"live -> single (summed per-call time, initial response included for refinement)",26.399058067300007,5.873773574829102
+"live -> parallel (summed per-call time, initial response included for refinement)",71.60828105291657,5.804720878601074
+"live -> refinement (summed per-call time, initial response included for refinement)",47.45143381180003,5.895467758178711

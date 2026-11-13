@@ -1,0 +1,8 @@
+{
+  "rule": "mean L2 norm of caption-token input embeddings / mean L2 norm of initial connector outputs",
+  "images": 1024,
+  "text_tokens": 36224,
+  "text_mean_norm": 0.872605562210083,
+  "visual_mean_norm_unscaled": 11.479656219482422,
+  "scale": 0.07601321376934281
+}

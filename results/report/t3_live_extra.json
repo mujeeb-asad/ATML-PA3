@@ -1,0 +1,19 @@
+{
+  "live": {
+    "discordant": {
+      "single_right_parallel_wrong": 4,
+      "single_right_refinement_wrong": 4,
+      "parallel_right_single_wrong": 3,
+      "parallel_right_refinement_wrong": 0,
+      "refinement_right_single_wrong": 6,
+      "refinement_right_parallel_wrong": 3
+    },
+    "parallel_no_answer_questions": 9,
+    "refinement_changed": 8,
+    "refinement_changed_from_no_answer": 8,
+    "questions_with_extracted_initial": 42,
+    "accuracy_initial_on_extracted": 0.6904761904761905,
+    "accuracy_revised_on_extracted": 0.6904761904761905,
+    "single_output_share_of_allowance": 0.22212239583333335
+  }
+}

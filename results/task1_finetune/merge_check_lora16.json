@@ -1,0 +1,7 @@
+{
+  "prompts": 8,
+  "dtype": "float32",
+  "max_abs_logit_diff": 7.62939453125e-05,
+  "max_abs_logit": 34.74678039550781,
+  "prompts_with_identical_argmax": 8
+}

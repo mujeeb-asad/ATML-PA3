@@ -1,0 +1,68 @@
+base_config: configs/base.yaml
+
+# model -> the post-trained checkpoint, thinking disabled in every chat prompt (enable_thinking=False)
+base_model: Qwen/Qwen3-0.6B
+model_revision: c1899de289a04d12100db370d81485cdf75e47ca
+
+# training data -> first 40,000 eligible MetaMathQA rows in source order
+train_dataset: meta-math/MetaMathQA
+train_dataset_revision: aa4f34d3d2d3231299b5b03d9b3e5a20da45aa18
+gsm8k_dataset: openai/gsm8k          # test questions, used to drop contaminated training rows and for the probe set
+hellaswag_dataset: Rowan/hellaswag   # validation contexts for the probe set (same source lm-eval scores)
+train_examples: 40000
+max_length: 2048                     # formatted length cap in tokens, longer rows are dropped (never truncated)
+
+# shared training recipe (identical for all five runs)
+micro_batch: 2
+grad_accum: 16                       # effective batch 32 -> 40,000 / 32 = 1,250 optimizer updates
+warmup_updates: 38
+adam_betas: [0.9, 0.999]
+adam_eps: 1.0e-8
+weight_decay: 0.01                   # biases and parameters with fewer than two dimensions are excluded
+max_grad_norm: 1.0
+checkpoint_updates: [312, 625, 937, 1250]   # 9,984 / 20,000 / 29,984 / 40,000 examples
+
+# the five variants. lr = peak learning rate
+methods:
+  full_ft:  {kind: full,   lr: 2.0e-5, l2sp_lambda: 0.0}
+  l2sp:     {kind: full,   lr: 2.0e-5, l2sp_lambda: 1.0e-3}
+  lora4:    {kind: lora,   lr: 2.0e-4, r: 4,  alpha: 8}
+  lora16:   {kind: lora,   lr: 2.0e-4, r: 16, alpha: 32}
+  oplora16: {kind: oplora, lr: 2.0e-4, r: 16, alpha: 32, protect_k: 128}
+
+adapter_dropout: 0.05
+adapter_targets: [q_proj, k_proj, v_proj, o_proj, gate_proj, up_proj, down_proj]
+
+# the seven evaluation conditions -> (training run, optimizer update). base is the unchanged starting model
+conditions:
+  base:        {method: null,     update: 0}
+  full_ft_mid: {method: full_ft,  update: 625}
+  full_ft:     {method: full_ft,  update: 1250}
+  l2sp:        {method: l2sp,     update: 1250}
+  lora4:       {method: lora4,    update: 1250}
+  lora16:      {method: lora16,   update: 1250}
+  oplora16:    {method: oplora16, update: 1250}
+
+# benchmark evaluation (lm-evaluation-harness, zero-shot, fp16, complete splits)
+gsm8k_task: gsm8k_cot                # generation, non-thinking chat template, greedy
+likelihood_tasks: [hellaswag, boolq, arc_easy]   # stock completion prompts, no chat template
+gsm8k_max_new_tokens: 1024
+gsm8k_batch_size: 64                 # generation batch. not fixed by the assignment, the same for every condition
+likelihood_batch_size: 64            # hellaswag / boolq / arc_easy scoring batch, same for every condition
+eval_limit: null                     # null -> complete splits. only the smoke test sets a number
+
+# qualitative prompts (24 = 8 questions x plain / json / template)
+qualitative_file: data/first_plot_questions.yaml
+qualitative_max_new_tokens: 512
+annotate_questions: [what_is_your_wish, enough_of_my_husband]   # first and last question in the file's plain order
+
+# diagnostics
+probe_per_domain: 32                 # 32 gsm8k test questions + 32 hellaswag validation contexts
+diagnostic_layers: [0, 13, 27]
+diagnostic_module: down_proj
+diagnostic_protect_k: 128            # same k as oplora, bases of the starting weight
+diagnostic_conditions: [full_ft_mid, full_ft, l2sp, lora4, lora16, oplora16]
+
+outputs_dir: outputs/task1_finetune   # checkpoints and fp16 evaluation models, not committed
+results_dir: results/task1_finetune
+train_file: data/task1/metamath_train.jsonl

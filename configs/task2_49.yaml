@@ -1,0 +1,7 @@
+base_config: configs/task2.yaml
+
+# optional step 7 -> the complete recipe again with 49 visual tokens, each 2 x 2 block of the 14 x 14 feature grid
+# averaged before the connector. a new connector and new adapters, same seed, data, budgets and evaluation
+visual_tokens: 49
+outputs_dir: outputs/task2_vlm_49
+results_dir: results/task2_vlm_49

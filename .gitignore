@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Caches
+.cache/
+hf_cache/
+
+# generated data, checkpoints and evaluation models (on the modal volume, not committed)
+data/task1/
+data/task2/
+data/task3/
+outputs/
+smoke/
+scaled/
+
+# Misc
+*.zip
+.DS_Store
+
+# latex build files of the report
+report/*.aux
+report/*.bbl
+report/*.blg
+report/*.log
+report/*.out

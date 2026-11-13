@@ -1,0 +1,46 @@
+{
+  "method": "l2sp",
+  "spec": {
+    "kind": "full",
+    "lr": 2e-05,
+    "l2sp_lambda": 0.001
+  },
+  "trainable_params": 596049920,
+  "total_params": 596049920,
+  "updates": 1250,
+  "effective_batch": 32,
+  "examples": 40000,
+  "train_seconds": 1261.1960400960015,
+  "checkpoint_seconds": 26.417115093999882,
+  "peak_memory_gb": 74.35502004623413,
+  "skipped_updates": [
+    1
+  ],
+  "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "seed": 6304,
+  "overhead": {
+    "reference": {
+      "bytes": 2384199680,
+      "copy_seconds": 0.03892506399999718,
+      "penalty_seconds": 32.67835822699651
+    }
+  },
+  "checkpoint_sizes": {
+    "312": {
+      "weights_bytes": 2384236542,
+      "recovery_bytes": 7152916966
+    },
+    "625": {
+      "weights_bytes": 2384236542,
+      "recovery_bytes": 7152916966
+    },
+    "937": {
+      "weights_bytes": 2384236542,
+      "recovery_bytes": 7152921254
+    },
+    "1250": {
+      "weights_bytes": 2384236542,
+      "recovery_bytes": 7152921254
+    }
+  }
+}

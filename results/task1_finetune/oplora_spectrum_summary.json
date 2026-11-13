@@ -1,0 +1,54 @@
+{
+  "k": 128,
+  "modules": 196,
+  "by_type_over_layers": {
+    "q_proj": {
+      "mean": 0.5136411924998987,
+      "min": 0.40889774436930537,
+      "max": 0.5942432640209283
+    },
+    "k_proj": {
+      "mean": 0.5578777612675621,
+      "min": 0.4587761839844397,
+      "max": 0.6212282756791931
+    },
+    "v_proj": {
+      "mean": 0.447773401867532,
+      "min": 0.3466130865524862,
+      "max": 0.5260470253493894
+    },
+    "o_proj": {
+      "mean": 0.38559562637330164,
+      "min": 0.2673245710206472,
+      "max": 0.4647139373101436
+    },
+    "gate_proj": {
+      "mean": 0.34594741162972076,
+      "min": 0.30529631365308907,
+      "max": 0.39865809087076565
+    },
+    "up_proj": {
+      "mean": 0.3030091526711806,
+      "min": 0.26364634886146104,
+      "max": 0.3498481784846638
+    },
+    "down_proj": {
+      "mean": 0.3239579554207849,
+      "min": 0.2796756537429062,
+      "max": 0.3840641456302409
+    }
+  },
+  "diagnostic_modules": {
+    "model.layers.0.mlp.down_proj": 0.2796756537429062,
+    "model.layers.13.mlp.down_proj": 0.37985809671541626,
+    "model.layers.27.mlp.down_proj": 0.2917012121941089
+  },
+  "weights": "base checkpoint rounded to fp16, decomposed in fp32 (torch.linalg.svdvals)",
+  "model": "Qwen/Qwen3-0.6B",
+  "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+  "seconds": 285.1382345460006,
+  "versions": {
+    "torch": "2.10.0+cpu",
+    "python": "3.12.3"
+  }
+}

@@ -1,0 +1,110 @@
+seed: 6304
+base_model: Qwen/Qwen3-0.6B
+model_revision: c1899de289a04d12100db370d81485cdf75e47ca
+train_dataset: meta-math/MetaMathQA
+train_dataset_revision: aa4f34d3d2d3231299b5b03d9b3e5a20da45aa18
+gsm8k_dataset: openai/gsm8k
+hellaswag_dataset: Rowan/hellaswag
+train_examples: 40000
+max_length: 2048
+micro_batch: 16
+grad_accum: 2
+warmup_updates: 38
+adam_betas:
+- 0.9
+- 0.999
+adam_eps: 1.0e-08
+weight_decay: 0.01
+max_grad_norm: 1.0
+checkpoint_updates:
+- 312
+- 625
+- 937
+- 1250
+methods:
+  full_ft:
+    kind: full
+    lr: 2.0e-05
+    l2sp_lambda: 0.0
+  l2sp:
+    kind: full
+    lr: 2.0e-05
+    l2sp_lambda: 0.001
+  lora4:
+    kind: lora
+    lr: 0.0002
+    r: 4
+    alpha: 8
+  lora16:
+    kind: lora
+    lr: 0.0002
+    r: 16
+    alpha: 32
+  oplora16:
+    kind: oplora
+    lr: 0.0002
+    r: 16
+    alpha: 32
+    protect_k: 128
+adapter_dropout: 0.05
+adapter_targets:
+- q_proj
+- k_proj
+- v_proj
+- o_proj
+- gate_proj
+- up_proj
+- down_proj
+conditions:
+  base:
+    method: null
+    update: 0
+  full_ft_mid:
+    method: full_ft
+    update: 625
+  full_ft:
+    method: full_ft
+    update: 1250
+  l2sp:
+    method: l2sp
+    update: 1250
+  lora4:
+    method: lora4
+    update: 1250
+  lora16:
+    method: lora16
+    update: 1250
+  oplora16:
+    method: oplora16
+    update: 1250
+gsm8k_task: gsm8k_cot
+likelihood_tasks:
+- hellaswag
+- boolq
+- arc_easy
+gsm8k_max_new_tokens: 1024
+gsm8k_batch_size: 128
+likelihood_batch_size: 64
+eval_limit: null
+qualitative_file: data/first_plot_questions.yaml
+qualitative_max_new_tokens: 512
+annotate_questions:
+- what_is_your_wish
+- enough_of_my_husband
+probe_per_domain: 32
+diagnostic_layers:
+- 0
+- 13
+- 27
+diagnostic_module: down_proj
+diagnostic_protect_k: 128
+diagnostic_conditions:
+- full_ft_mid
+- full_ft
+- l2sp
+- lora4
+- lora16
+- oplora16
+outputs_dir: scaled/outputs/task1_finetune
+results_dir: scaled/results/task1_finetune
+train_file: scaled/data/task1/metamath_train.jsonl

@@ -1,0 +1,8 @@
+step,minutes,peak_memory_gb,trainable_params
+"feature caching (siglip, once)",2.496603465066667,2.363722801208496,0.0
+training -> caption,6.357415427633342,4.481432914733887,1837056.0
+training -> instruct,4.653236914749993,4.481432914733887,6424576.0
+training -> vqa,2.318279707283318,4.481432914733887,6424576.0
+development evaluation (all points),0.15570614078333472,4.768146991729736,
+checkpoint i/o,0.048832997950003926,,
+final evaluation (generation + nll),0.35531166895,,
